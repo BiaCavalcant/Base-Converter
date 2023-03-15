@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Base Converter</title>
+</head>
+
+<body>
+         <header>
+         <img src="logo.png" alt="logo" width="200px" height="90px"> 
+        </header>
+        <br>
+        <div class="cards">
+                <div class="card">
+                       
+                       <!-- DECIMAP P BASES -->
+                        <br />
+
+                        <h3>Decimal</h3> <br>
+                        <input id="demo1" type="text" placeholder="Digite o valor em decimal" />
+
+                        <br /><br />
+
+                        <h3>converter para:</h3>
+
+                        <input onclick="aparecer_octal()" type="checkbox" /><b>Octal</b>
+                        <br />
+                        <div id="demo2"></div>
+
+                        <br />
+
+                        <input onclick="aparecer_hexa()" type="checkbox" /><b>Hexadecimal</b>
+                        <br />
+                        <div id="demo3"></div>
+
+                        <br />
+
+                        <input onclick="aparecer_bin()" type="checkbox" /><b>Binário</b>
+                        <br />
+                        <div id="demo4"></div>
+
+                        <br /><br />
+
+                        <button onclick="converter_decimal()">Converter</button>
+                </div>
+
+                <!-- BINARIO P BASES -->
+                <div class="card">
+                  
+                  <br />
+
+                  <h3>Binário</h3> <br>
+                  <input id="demo1b" type="text" placeholder="Digite o valor em binário" />
+
+                  <br /><br />
+
+                  <h3>converter para:</h3>
+
+                  <input onclick="aparecer_octal_b()" type="checkbox" /><b>Octal</b>
+                  <br />
+                  <div id="demo2b"></div>
+
+                  <br />
+
+                  <input onclick="aparecer_hexa_b()" type="checkbox" /><b>Hexadecimal</b>
+                  <br />
+                  <div id="demo3b"></div>
+
+                  <br />
+
+                  <input onclick="aparecer_dec_b()" type="checkbox" /><b>Decimal</b>
+                  <br />
+                  <div id="demo4b"></div>
+
+                  <br /><br />
+
+                  <button onclick="converter_bin()">Converter</button>
+                
+                </div>
+
+                <!-- OCTAL P BASES -->
+
+                <div class="card">
+                  
+                        <br />
+      
+                        <h3>Octal</h3> <br>
+                        <input id="demo1o" type="text" placeholder="Digite o valor em octal" />
+      
+                        <br /><br />
+      
+                        <h3>converter para:</h3>
+
+                        <input onclick="aparecer_decimal_o()" type="checkbox" /><b>Decimal</b>
+                        <br />
+                        <div id="demo2o"></div>
+
+                        <br />
+
+                        <input onclick="aparecer_hexa_o()" type="checkbox" /><b>Hexadecimal</b>
+                        <br />
+                        <div id="demo3o"></div>
+
+                        <br />
+
+                        <input onclick="aparecer_bin_o()" type="checkbox" /><b>Binário</b>
+                        <br />
+                        <div id="demo4o"></div>
+
+                        <br /><br />
+      
+                        <button onclick="converter_oct()">Converter</button>
+                      
+                      </div>
+                      
+                      <!-- HEXA P BASES -->
+
+                <div class="card">
+                  
+                        <br />
+      
+                        <h3>Hexa</h3> <br>
+                        <input id="demo1h" type="text" placeholder="Digite o valor em hexadecimal" />
+      
+                        <br /><br />
+      
+                        <h3>converter para:</h3>
+
+                        <input onclick="aparecer_dec_h()" type="checkbox" /><b>Decimal</b>
+                        <br />
+                        <div id="demo2h"></div>
+
+                        <br />
+
+                        <input onclick="aparecer_oct_h()" type="checkbox" /><b>Octal</b>
+                        <br />
+                        <div id="demo3h"></div>
+
+                        <br />
+
+                        <input onclick="aparecer_bin_h()" type="checkbox" /><b>Binário</b>
+                        <br />
+                        <div id="demo4h"></div>
+
+                        <br /><br />
+      
+                        <button onclick="converter_hex()">Converter</button>
+                      
+                      </div>
+                      </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<footer>
+        <br>
+        Desenvolvido por Bianca Cavalcante & Sarah Oliveira
+        <br><br>
+        São Paulo, SP
+</footer>
+
+</body>
+</html>
+<script>
+        // CALCULO DECIMAL P BASES
+        function converter_decimal() {
+                var decimal = Number(demo1.value);
+
+                let octal = decimal.toString(8);
+
+                let hexadecimal = decimal.toString(16);
+
+                let binaria = decimal.toString(2);
+
+                console.log(decimal);
+                console.log(octal);
+                console.log(hexadecimal);
+                console.log(binaria);
+
+                document.getElementById("demo1").innerHTML = ` ${decimal}`;
+                document.getElementById("demo2").innerHTML = ` ${octal}`;
+                document.getElementById("demo3").innerHTML = ` ${hexadecimal}`;
+                document.getElementById("demo4").innerHTML = ` ${binaria}`;
+        }
+
+        function aparecer_bin() {
+                demo4.style.display = "block";
+        }
+
+        function aparecer_hexa() {
+                demo3.style.display = "block";
+        }
+
+        function aparecer_octal() {
+                demo2.style.display = "block";
+        }
+
+        // CALCULO BINARIO P BASES
+        function converter_bin() {
+                var binariob = Number(demo1b.value);
+
+                let octalb = binariob.toString(8);
+
+                let hexadecimalb = binariob.toString(16);
+
+                // let decimal = binariob.toString(10);
+                let decimal = parseInt(binariob, 2);
+
+                console.log(decimal);
+                console.log(octalb);
+                console.log(hexadecimalb);
+                console.log(binariob);
+
+                document.getElementById("demo1b").innerHTML = ` ${binariob}`;
+                document.getElementById("demo2b").innerHTML = ` ${octalb}`;
+                document.getElementById("demo3b").innerHTML = ` ${hexadecimalb}`;
+                document.getElementById("demo4b").innerHTML = ` ${decimal}`;
+        }
+
+        function aparecer_dec_b() {
+                demo4b.style.display = "block";
+        }
+
+        function aparecer_hexa_b() {
+                demo3b.style.display = "block";
+        }
+
+        function aparecer_octal_b() {
+                demo2b.style.display = "block";
+        }
+
+         // CALCULO OCTAL P BASES
+         function converter_hex() {
+                var octal = Number(demo1o.value);
+
+                let binario_o = octal.toString(2);
+
+                let hexadecimalo = octal.toString(16);
+
+                // let decimalo = octal.toString(10);
+                let decimalo = parseInt(binario_o, 2);
+
+                console.log(decimalo);
+                console.log(octal);
+                console.log(hexadecimalo);
+                console.log(binario_o);
+
+                document.getElementById("demo1o").innerHTML = ` ${octal}`;
+                document.getElementById("demo2o").innerHTML = ` ${decimalo}`;
+                document.getElementById("demo3o").innerHTML = ` ${hexadecimalo}`;
+                document.getElementById("demo4o").innerHTML = ` ${binario_o}`;
+        }
+
+        function aparecer_bin_o() {
+                demo4o.style.display = "block"
+        }
+
+        function aparecer_hexa_o() {
+                demo3o.style.display = "block"
+        }
+
+        function aparecer_decimal_o() {
+                demo2o.style.display = "block"
+        }
+
+         // CALCULO HEXA P BASES
+         function converter_oct() {
+                var octal = Number(demo1o.value);
+
+                let binario_o = octal.toString(2);
+
+                let hexadecimalo = octal.toString(16);
+
+                let decimalo = octal.toString(10);
+
+                console.log(decimalo);
+                console.log(octal);
+                console.log(hexadecimalo);
+                console.log(binario_o);
+
+                document.getElementById("demo1o").innerHTML = ` ${octal}`;
+                document.getElementById("demo2o").innerHTML = ` ${decimalo}`;
+                document.getElementById("demo3o").innerHTML = ` ${hexadecimalo}`;
+                document.getElementById("demo4o").innerHTML = ` ${binario_o}`;
+        }
+
+        function aparecer_bin_o() {
+                demo4o.style.display = "block"
+        }
+
+        function aparecer_hexa_o() {
+                demo3o.style.display = "block"
+        }
+
+        function aparecer_decimal_o() {
+                demo2o.style.display = "block"
+        }
+</script>
