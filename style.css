@@ -168,13 +168,6 @@ button {
     background-color: #dcdcdc;
     border-style: none;
 }
-#demo1h{
-    width: 200px;
-    height: 30px;
-    border-radius: 9px;
-    background-color: #dcdcdc;
-    border-style: none;
-}
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -186,3 +179,38 @@ button {
   button:hover{
     background-color: rgb(3, 156, 186);
   }
+
+  #demo2h{
+    display: none;
+    background-color: #dcdcdc;
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    width: 15%;
+    height: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#demo3h{
+    display: none;
+    background-color: #dcdcdc;
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    width: 15%;
+    height: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#demo4h{
+    display: none;
+    background-color: #dcdcdc;
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(5, 5, 5);
+    width: 60%;
+    height: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+  

@@ -233,42 +233,10 @@
         }
 
          // CALCULO OCTAL P BASES
-         function converter_hex() {
-                var octal = Number(demo1o.value);
-
-                let binario_o = octal.toString(2);
-
-                let hexadecimalo = octal.toString(16);
-
-                // let decimalo = octal.toString(10);
-                let decimalo = parseInt(binario_o, 2);
-
-                console.log(decimalo);
-                console.log(octal);
-                console.log(hexadecimalo);
-                console.log(binario_o);
-
-                document.getElementById("demo1o").innerHTML = ` ${octal}`;
-                document.getElementById("demo2o").innerHTML = ` ${decimalo}`;
-                document.getElementById("demo3o").innerHTML = ` ${hexadecimalo}`;
-                document.getElementById("demo4o").innerHTML = ` ${binario_o}`;
-        }
-
-        function aparecer_bin_o() {
-                demo4o.style.display = "block"
-        }
-
-        function aparecer_hexa_o() {
-                demo3o.style.display = "block"
-        }
-
-        function aparecer_decimal_o() {
-                demo2o.style.display = "block"
-        }
-
-         // CALCULO HEXA P BASES
          function converter_oct() {
-                var octal = Number(demo1o.value);
+                var octal = demo1o.value;
+
+                octal = parseInt(octal,8)
 
                 let binario_o = octal.toString(2);
 
@@ -297,5 +265,40 @@
 
         function aparecer_decimal_o() {
                 demo2o.style.display = "block"
+        }
+
+         // CALCULO HEXA P BASES
+         function converter_hex() {
+                var hexa = Number(demo1h.value);
+
+                hexa = parseInt(hexa,16)
+
+                let binarioh = hexa.toString(2);
+
+                let octalh = hexa.toString(8);
+
+                let decimalh = hexa.toString(10);
+
+                console.log(decimalh);
+                console.log(octalh);
+                console.log(hexa);
+                console.log(binarioh);
+
+                document.getElementById("demo1h").innerHTML = ` ${hexa}`;
+                document.getElementById("demo2h").innerHTML = ` ${decimalh}`;
+                document.getElementById("demo3h").innerHTML = ` ${octalh}`;
+                document.getElementById("demo4h").innerHTML = ` ${binarioh}`;
+        }
+
+        function aparecer_bin_h() {
+                demo4h.style.display = "block"
+        }
+
+        function aparecer_oct_h() {
+                demo3h.style.display = "block"
+        }
+
+        function aparecer_dec_h() {
+                demo2h.style.display = "block"
         }
 </script>
