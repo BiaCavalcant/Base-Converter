@@ -13,7 +13,7 @@ body {
     padding: 5px;
     color: rgb(0, 0, 0);
     width: 15%;
-    height: 40px;
+    height: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -24,7 +24,7 @@ body {
     padding: 5px;
     color: rgb(0, 0, 0);
     width: 15%;
-    height: 40px;
+    height: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -35,7 +35,7 @@ body {
     padding: 5px;
     color: rgb(5, 5, 5);
     width: 60%;
-    height: 50px;
+    height: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -46,7 +46,7 @@ body {
     padding: 5px;
     color: rgb(0, 0, 0);
     width: 15%;
-    height: 40px;
+    height: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -57,7 +57,7 @@ body {
     padding: 5px;
     color: rgb(0, 0, 0);
     width: 15%;
-    height: 40px;
+    height: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -68,7 +68,7 @@ body {
     padding: 5px;
     color: rgb(5, 5, 5);
     width: 60%;
-    height: 50px;
+    height: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -78,8 +78,8 @@ body {
     border-radius: 5px;
     padding: 5px;
     color: rgb(0, 0, 0);
-    width: 15%;
-    height: 40px;
+    width: 10%;
+    height: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -90,7 +90,7 @@ body {
     padding: 5px;
     color: rgb(0, 0, 0);
     width: 15%;
-    height: 40px;
+    height: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -101,7 +101,7 @@ body {
     padding: 5px;
     color: rgb(5, 5, 5);
     width: 60%;
-    height: 50px;
+    height: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -113,11 +113,12 @@ header {
 footer{
     background-color: black;
     text-align: center;
-    /* padding: 10px 5px; */
+    position: absolute;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width:1220px;
+    width: 1219px;
     height: 100px;
+    padding: 7px 0;
 
 }
 .card {
@@ -125,18 +126,19 @@ footer{
     background-color: white;
     width: 400px;
     height: auto;
-    border-radius: 5px;
+    border-radius: 0px;
     margin-left: 399px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 30px;
     box-shadow: 7px 7px 13px 0px rgba(50,50,50, 0.22);
     color: black;
-
+    position: relative;
     width: calc(25% - 20px);
     margin: 10px;
     box-sizing: border-box;
     float: left;
     display: inline-block;
+    transition: all 0.3s ease-in-out;
 
 }
 button {
@@ -144,8 +146,8 @@ button {
     width: 100px;
     height: 40px;
     border-style: none;
-    border-radius: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.3s ease-in-out;
 }
 #demo1{
     width: fit-content;
@@ -168,16 +170,24 @@ button {
     background-color: #dcdcdc;
     border-style: none;
 }
+#demo1h{
+    width: 200px;
+    height: 30px;
+    border-radius: 9px;
+    background-color: #dcdcdc;
+    border-style: none;
+}
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    z-index: 10;
   }
   .cards:hover > .card:not(:hover) {
     opacity: 0.5;
   }
   button:hover{
     background-color: rgb(3, 156, 186);
+    transform: scale(1.05);
+    cursor: pointer;
   }
 
   #demo2h{
@@ -187,7 +197,7 @@ button {
     padding: 5px;
     color: rgb(0, 0, 0);
     width: 15%;
-    height: 40px;
+    height: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -198,7 +208,7 @@ button {
     padding: 5px;
     color: rgb(0, 0, 0);
     width: 15%;
-    height: 40px;
+    height: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -209,8 +219,19 @@ button {
     padding: 5px;
     color: rgb(5, 5, 5);
     width: 60%;
-    height: 50px;
+    height: 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
   
+#demo1, #demo1b, #demo1o, #demo1h {
+    width: 200px;
+    height: 40px;
+    text-align: start;
+    border-radius: 6px;
+    
+}
+#demo1, #demo1b, #demo1o, #demo1h:focus {
+    outline: none;
+}
+

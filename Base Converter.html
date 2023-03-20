@@ -122,7 +122,7 @@
                   
                         <br />
       
-                        <h3>Hexa</h3> <br>
+                        <h3>Hexadecimal</h3> <br>
                         <input id="demo1h" type="text" placeholder="Digite o valor em hexadecimal" />
       
                         <br /><br />
@@ -157,9 +157,9 @@
 
 <footer>
         <br>
-        Desenvolvido por Bianca Cavalcante & Sarah Oliveira
+        &copy; Bianca Cavalcante & Sarah Oliveira
         <br><br>
-        São Paulo, SP
+        São Paulo Tech School
 </footer>
 
 </body>
@@ -187,27 +187,29 @@
         }
 
         function aparecer_bin() {
-                demo4.style.display = "block";
+                demo4.style.display = "inline-block";
         }
 
         function aparecer_hexa() {
-                demo3.style.display = "block";
+                demo3.style.display = "inline-block";
         }
 
         function aparecer_octal() {
-                demo2.style.display = "block";
+                demo2.style.display = "inline-block";
         }
 
         // CALCULO BINARIO P BASES
         function converter_bin() {
                 var binariob = Number(demo1b.value);
 
+                binariob = parseInt(binariob,2);
+
                 let octalb = binariob.toString(8);
 
                 let hexadecimalb = binariob.toString(16);
 
                 // let decimal = binariob.toString(10);
-                let decimal = parseInt(binariob, 2);
+                let decimal = binariob.toString(10);
 
                 console.log(decimal);
                 console.log(octalb);
@@ -221,15 +223,15 @@
         }
 
         function aparecer_dec_b() {
-                demo4b.style.display = "block";
+                demo4b.style.display = "inline-block";
         }
 
         function aparecer_hexa_b() {
-                demo3b.style.display = "block";
+                demo3b.style.display = "inline-block";
         }
 
         function aparecer_octal_b() {
-                demo2b.style.display = "block";
+                demo2b.style.display = "inline-block";
         }
 
          // CALCULO OCTAL P BASES
@@ -256,15 +258,15 @@
         }
 
         function aparecer_bin_o() {
-                demo4o.style.display = "block"
+                demo4o.style.display = "inline-block"
         }
 
         function aparecer_hexa_o() {
-                demo3o.style.display = "block"
+                demo3o.style.display = "inline-block"
         }
 
         function aparecer_decimal_o() {
-                demo2o.style.display = "block"
+                demo2o.style.display = "inline-block"
         }
 
          // CALCULO HEXA P BASES
@@ -291,14 +293,14 @@
         }
 
         function aparecer_bin_h() {
-                demo4h.style.display = "block"
+                demo4h.style.display = "inline-block"
         }
 
         function aparecer_oct_h() {
-                demo3h.style.display = "block"
+                demo3h.style.display = "inline-block"
         }
 
         function aparecer_dec_h() {
-                demo2h.style.display = "block"
+                demo2h.style.display = "inline-block"
         }
 </script>
